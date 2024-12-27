@@ -1,23 +1,51 @@
-import styled from "styled-components";
 
-const RegistrationArea = styled.div`
-        background: #333;
-`
-
-const RegistrationImage = styled.div`
-     background-image: url(/login-image.svg);
-     background-size: cover;
-     height: 100vh;
-     width: 50vw;
-`
+import { Box, Container, Grid} from "@mui/material"
+import { BannerImage, FormComponent, Logo, StyledH1, StyledP, StyledUl  } from "@/components"
+import { pxToRem } from "@/utils"
 
 function Registration() {
   
 
     return (
-      <>
-       <RegistrationArea>Registration</RegistrationArea> 
-       <RegistrationImage />
+      <>       
+       <Box>
+                 <Grid container>
+                     <Grid item xs={12} sm={6} sx={{ alignItems: 'center', display: 'flex', height: '100vh' }} >
+                         <Container maxWidth="sm">
+                         <Box sx={{ marginBottom: pxToRem(24) }}><Logo height={41} width={100}/></Box>
+                          <Box sx={{ marginBottom: pxToRem(24) }}>
+                            <StyledH1>Faça seu cadastro</StyledH1> 
+                            <StyledP>Primeiro diga nos quem voce é.</StyledP>
+                            <StyledUl>
+                                  <li>Entre 8 e 16 caracteres;</li>
+                                  <li>Pelo menos uma letra Maiuscula;</li>
+                                  <li>Pelo menos um caracteere especial;</li>
+                                  <li>pelo menos um numero;</li>
+                            </StyledUl>
+                          </Box>     
+                         <FormComponent 
+                       inputs={[
+                        { type: 'email', placeholder: 'Email'},
+                        { type: 'password', placeholder: 'senha' },
+                       ]}
+                       buttons={[
+                        { className: 'primary', type: 'submit', children: 'Login'},
+                       ]}
+                       message={{
+                        msg: 'erro',
+                        type: 'error',
+                       }}
+                    />    
+                         </Container>
+                     </Grid>
+                     <Grid 
+                      item 
+                      sm={6}
+                       sx={{ display: { xs: 'none', sm: 'block' }  }} >
+                         <BannerImage />                 
+                     </Grid>
+                 </Grid>
+              </Box> 
       </>
     )
   }
