@@ -1,8 +1,10 @@
-function Profifle() {
+import { Header } from "@/components"
 
+function Profifle() {
     return (
       <>
-       <h1>Profifle</h1>
+      <Header />
+       <h1>Profile</h1>
       </>
     )
   }
