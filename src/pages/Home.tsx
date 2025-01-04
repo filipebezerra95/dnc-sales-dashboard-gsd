@@ -1,4 +1,4 @@
-import {AvatarsList, CardComponent, Header } from "@/components"
+import {AvatarsList, CardComponent, CustomTable, Header } from "@/components"
 import { Container } from "@mui/material"
 import { currencyConverter } from "@/utils"
 
@@ -21,6 +21,27 @@ function Home() {
         subtitle: currencyConverter(15834.54),
       },
     ]
+
+    const mockTableData = {
+      headers: ['name', 'email', 'actions'],
+      rows: [
+        [
+          <span>Nome1</span>,
+          <span>Nome1@email</span>,
+          <button>ACTION</button>,
+        ],
+        [
+          <span>Nome2</span>,
+          <span>Nome2@email</span>,
+          <button>ACTION</button>,
+        ],
+        [
+          <span>Nome3</span>,
+          <span>Nome3@email</span>,
+          <button>ACTION</button>,
+        ],
+      ]
+    }
     return (
       <>
        
@@ -29,6 +50,9 @@ function Home() {
             <CardComponent >Card</CardComponent>
             <CardComponent >
               <AvatarsList listdata={mockListData}/>
+            </CardComponent>
+            <CardComponent >
+              <CustomTable headers={mockTableData.headers} rows={mockTableData.rows}/>
             </CardComponent>
        </Container>
        
