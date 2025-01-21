@@ -28,7 +28,7 @@ export const usePost = <T, P>(endpoint: string) => {
             })
             setData(response.data)
         } catch (e: any) {
-            setError(e.response.status ?? 500)
+            setError(e.response?.status ?? 500)
 
         } finally {
             setLoading(false)
