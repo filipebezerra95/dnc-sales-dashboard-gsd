@@ -28,12 +28,12 @@ import { RootState } from '@/redux'
 import { setMessage, setProfileData } from '@/redux/slices/createProfile'
 
 // TYPES
-import { ProfileData } from '@/types'
+import { CreateProfileData } from '@/types'
 
 function Registration() {
   const dispatch = useDispatch()
   const navigate = useNavigate()
-  const { data, loading, error, postData } = usePost<string, ProfileData>(
+  const { data, loading, error, postData } = usePost<string, CreateProfileData>(
     'profile/create'
   )
   const { email } = useSelector((state: RootState) => state.createProfile)
