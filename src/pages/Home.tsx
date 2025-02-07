@@ -89,7 +89,7 @@ function Home() {
                         {!highlightsLoading && highlightsData && (
                           <>
                             <StyledH2 className="mb-1">Metas do mês</StyledH2>
-                            <StyledH3 className="mb-1" size={40} lineheight={40}>
+                            <StyledH3 className="mb-1" size={40} lineheight={40} color="black">
                               {currencyConverter(highlightsData[1].value)}                             
                             </StyledH3>
                             <StyledSpan color="white">
