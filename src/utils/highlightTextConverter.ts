@@ -10,8 +10,8 @@ export function highlightTextConverter(text: string): string {
         case 'success' :
             return '* A meta do mes foi batida ! parabens!'
         case 'warning' :
-            return '*falta pouco vamos la!'
+            return '* falta pouco vamos la!'
         default:
-            return 'sem dados no momento !'
+            return '* sem dados no momento !'
     }
 }

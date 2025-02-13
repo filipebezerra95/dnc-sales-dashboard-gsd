@@ -3,7 +3,7 @@
 * @param exp - number to be converted
 * @returns Converted exp in days;
 */
-export function jwtExpirationDataConverter(exp: number): number {
+export function jwtExpirationDateConverter(exp: number): number {
     const currentTime = Math.floor(Date.now() / 1000)
     const secondsUntilExpiration = exp - currentTime
     const secondsInAday = 60 * 60 * 24
