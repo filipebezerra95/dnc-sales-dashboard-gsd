@@ -7,24 +7,28 @@
   "skipLibCheck": true,
   
   
+  
   // Configurações de resolução de módulos
   "moduleResolution": "node",
   "baseUrl": ".",
   "paths": {
-    "@/*": ["src/*"]
+  "@/": ["src/"]
   },
   "allowJs": true,
   "esModuleInterop": true,
   "resolveJsonModule": true,
   
+  
   // Configurações do React
   "jsx": "react-jsx",
+  
   
   // Configurações do TypeScript
   "strict": true,
   "noUnusedLocals": true,
   "noUnusedParameters": true,
   "noFallthroughCasesInSwitch": true,
+  
   
   // Configurações adicionais para testes
   "types": ["jest", "node"]
