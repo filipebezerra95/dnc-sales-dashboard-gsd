@@ -1,5 +1,5 @@
 import React from 'react'
-import  ReactDOM  from 'react-dom/client'
+import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import { GlobalStyle } from './styles/globalStyle.ts'
 import { AppThemeProvider } from './Contexts/AppThemeContext.tsx'
@@ -8,11 +8,11 @@ import store from './redux/index.ts'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-   <Provider store={store}>
+    <Provider store={store}>
       <AppThemeProvider>
-         <GlobalStyle />
-         <App />
+        <GlobalStyle />
+        <App />
       </AppThemeProvider>
-   </Provider>
-  </React.StrictMode>,
+    </Provider>
+  </React.StrictMode>
 )

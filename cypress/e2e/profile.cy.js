@@ -15,12 +15,10 @@ describe('Check if create profile page renders the correct components', () => {
 
   it('should display theme button switch', () => {
     cy.get('#theme-switch').should('be.visible')
-    
   })
 
   it('should display logout button and logout flow works', () => {
     cy.get('#logout').click()
     cy.url().should('include', '/')
-    
   })
 })

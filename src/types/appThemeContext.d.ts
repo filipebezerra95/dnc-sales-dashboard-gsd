@@ -1,5 +1,5 @@
 export interface AppThemeContextProps {
-    appTheme: string
-    toggleTheme: sting
-    toggleTheme: () => void
+  appTheme: string
+  toggleTheme: sting
+  toggleTheme: () => void
 }

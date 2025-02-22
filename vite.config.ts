@@ -9,11 +9,11 @@ export default defineConfig({
     include: ['@emotion/styled'],
   },
   server: {
-    host: true
+    host: true,
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src')
-    }
-  }
+      '@': path.resolve(__dirname, './src'),
+    },
+  },
 })

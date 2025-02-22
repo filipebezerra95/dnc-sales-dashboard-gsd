@@ -13,7 +13,6 @@ describe('Check if create profile page renders the correct components', () => {
   })
 
   it('should display leads title', () => {
-    cy.get('#leads-title').should('be.visible')  
+    cy.get('#leads-title').should('be.visible')
   })
-
 })

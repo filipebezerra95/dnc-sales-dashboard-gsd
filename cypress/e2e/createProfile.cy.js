@@ -12,4 +12,3 @@ describe('Check if create profile page renders the correct components', () => {
     cy.get('button[type="submit"]').should('be.visible')
   })
 })
-

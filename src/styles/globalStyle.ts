@@ -1,8 +1,8 @@
-import { createGlobalStyle } from "styled-components";
-import { DefaultTheme } from "styled-components";
-import { pxToRem } from "@/utils";
+import { createGlobalStyle } from 'styled-components'
+import { DefaultTheme } from 'styled-components'
+import { pxToRem } from '@/utils'
 
-export const GlobalStyle = createGlobalStyle<{ theme?: DefaultTheme }> `
+export const GlobalStyle = createGlobalStyle<{ theme?: DefaultTheme }>`
       body, html {
            background: ${(props) => props.theme.appBackground};
            color: ${(props) => props.theme.appColor};
@@ -31,7 +31,7 @@ export const GlobalStyle = createGlobalStyle<{ theme?: DefaultTheme }> `
             background-color: ${(props) => props.theme.appskeletonFrom};
           }
           to {
-          background-color: ${(props) => props.theme.appskeletonTo };
+          background-color: ${(props) => props.theme.appskeletonTo};
           }
       }
 
