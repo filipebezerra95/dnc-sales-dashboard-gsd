@@ -143,7 +143,7 @@ function Leads() {
                       ])}
                     />
                   ) : (
-                    <StyledSpan>voce nao tem leads cadastrados</StyledSpan>
+                    <StyledSpan>sem leads cadastrados</StyledSpan>
                   )}
                 </>
               )}
